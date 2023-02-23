@@ -1,0 +1,18 @@
+.example-header-image {
+    background-image: url('../../../../assets/quiz.png');
+    background-size: cover;
+  }
+
+  .mat-card-avatar {
+    height: 40px;
+    width: 40px;
+    border-radius: 0% !important;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.active {
+  width: 5%;
+  height: 10%;
+  border-radius: 41px;
+}

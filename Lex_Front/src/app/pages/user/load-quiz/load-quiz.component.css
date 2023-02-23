@@ -1,0 +1,18 @@
+.example-header-image {
+    background-image: url('../../../../assets/test.png');
+    background-size: cover;
+  }
+
+  .trunctate{
+    display: block;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .mat-card>.mat-card-actions:last-child {
+    margin-bottom: -8px;
+    padding-bottom: 0;
+    width: 109%;
+}

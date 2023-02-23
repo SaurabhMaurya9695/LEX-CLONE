@@ -1,0 +1,16 @@
+<mat-card>
+   <h1 class="text-center" >My Categories</h1>
+  <mat-list>
+    <mat-list-item *ngFor="let x of category">
+      <mat-icon mat-list-icon>category</mat-icon>
+      <div mat-line>{{ x.title }}</div>
+      <div mat-line>{{ x.description }}</div>
+      <mat-divider></mat-divider>
+      <button mat-raised-button color="primary" (click)="DeleteQuiz(x.cid)"> Delete </button>
+    </mat-list-item>
+  </mat-list>
+
+  <div class="container text-center mt20" style="margin-top:20px">
+    <button mat-raised-button color="primary" routerLink="/admin/add-category">Add category</button>
+  </div>
+</mat-card>
