@@ -1,0 +1,26 @@
+package com.lex.service.impl;
+
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.lex.entity.User;
+import com.lex.entity.UserRole;
+import com.lex.repo.RoleRepository;
+import com.lex.repo.UserRepository;
+import com.lex.service.UserService;
+
+public class UserServiceImpl implements UserService{
+
+	@Autowired
+	private UserRepository userRepository;
+	
+	@Autowired
+	private RoleRepository roleRepository;
+	
+	@Override
+	public User createUser(User user, Set<UserRole> userRoles) {
+		return null;
+	}
+
+}

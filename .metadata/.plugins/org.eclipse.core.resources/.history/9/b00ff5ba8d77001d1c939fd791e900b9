@@ -1,0 +1,5 @@
+package com.lex.repo;
+
+public interface UserRepository {
+
+}

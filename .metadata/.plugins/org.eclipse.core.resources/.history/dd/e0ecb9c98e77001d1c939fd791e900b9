@@ -1,0 +1,5 @@
+package com.lex.service;
+
+public interface UserService {
+
+}

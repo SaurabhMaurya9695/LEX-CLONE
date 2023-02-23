@@ -1,0 +1,44 @@
+package com.lex.controller;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import com.lex.entity.Role;
+import com.lex.entity.User;
+import com.lex.entity.UserRole;
+import com.lex.service.UserService;
+
+@RestController
+@RequestMapping("/user")
+public class UserController {
+	
+	@Autowired
+	private UserService userService ;
+	
+	//creating the user
+	@PostMapping("/")  
+	public User createUser(@RequestBody User user) throws Exception {
+		
+		Set<UserRole> userRoles = new HashSet<>();
+		// we want only one user is Admin and rest of the user is Normal user;
+		//first we have to create role then set to the userroles
+		Role role = new Role();
+		role.setRoleId(45L) ; // 44 for admin and 45 for Normal user;
+		role.setRoleName("NORMAL");
+		
+		
+		//first set user and after then set role 
+		UserRole ur = new UserRole();
+		ur.setRole(role);
+		ur.setUser(user);
+		
+		//set ur to user role;
+		userRoles.add(ur);
+		
+		
+		return this.userService.createUser(user, userRoles);
+	}
+}

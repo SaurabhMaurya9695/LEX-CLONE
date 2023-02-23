@@ -1,0 +1,13 @@
+package com.lex.service;
+
+import java.util.Set;
+
+import com.lex.entity.User;
+import com.lex.entity.UserRole;
+
+public interface UserService {
+	
+//	createing user 
+	public User createUser(User user , Set<UserRole> userRoles);
+	
+}

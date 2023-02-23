@@ -1,0 +1,22 @@
+package com.lex;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class LexApplication implements CommandLineRunner{
+
+	public static void main(String[] args) {
+		SpringApplication.run(LexApplication.class, args);
+	}
+
+	
+	//BY CMDRunner we get a specific area where i can run my code;
+	@Override
+	public void run(String... args) throws Exception {
+		
+		System.out.println("working ");
+	}
+
+}

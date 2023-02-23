@@ -1,0 +1,38 @@
+package com.lex;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.lex.entity.Role;
+import com.lex.entity.User;
+
+@SpringBootApplication
+public class LexApplication implements CommandLineRunner {
+
+	public static void main(String[] args) {
+		SpringApplication.run(LexApplication.class, args);
+	}
+
+	// BY CMDRunner we get a specific area where i can run my code;
+	@Override
+	public void run(String... args) throws Exception {
+
+		System.out.println("working ");
+//		setting up tha data
+		User user = new User();
+		user.setEmail("saurabhyash1707@gmail.com");
+		user.setFirstName("Saurabh");
+		user.setLastName("Maurya");
+		user.setPassword("Saurabh@1234");
+		user.setPhone("6392272716");
+		user.setUsername("Saurabh");
+		
+		//assigning the roles;
+		Role role = new Role();
+		role.setRoleName("ADMIN");
+		
+		
+	}
+
+}

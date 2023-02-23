@@ -1,0 +1,45 @@
+package com.lex.entity;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "roles")
+public class Role {
+
+	@Id
+	private Long roleId;
+	private String roleName;
+	
+	//many roles has one user;
+	private Set<UserRole> userRole = new HashSet<>();
+
+	public Role(Long roleId, String roleName) {
+		super();
+		this.roleId = roleId;
+		this.roleName = roleName;
+	}
+
+	public Role() {
+		super();
+	}
+
+	public Long getRoleId() {
+		return roleId;
+	}
+
+	public void setRoleId(Long roleId) {
+		this.roleId = roleId;
+	}
+
+	public String getRoleName() {
+		return roleName;
+	}
+
+	public void setRoleName(String roleName) {
+		this.roleName = roleName;
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.lex.entity;
+
+public class UserRole {
+
+}
